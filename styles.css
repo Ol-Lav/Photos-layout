@@ -1,0 +1,253 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color:#f5f7fa;
+}
+
+h1,
+h2,
+h3,
+p,
+div {
+  margin: 0;
+  padding: 0;
+}
+
+
+.featuredImages {
+  max-width: 1120px;
+  width: 80%;
+  margin: 30px auto;
+}
+
+.featuredImages__container {
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  gap: 30px
+}
+
+.featuredImages__title {
+  margin: 40px auto;
+  text-align: center;
+  font-size: 24px;
+  color: #424242;
+  text-transform: uppercase;
+}
+
+.featuredImages__item {
+  height: 100%;
+  width: 100%;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  transition: all 0.2s linear;
+}
+
+.featuredImages__item:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.featuredImages__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.featuredImages__text-container {
+  position: relative;
+}
+
+.featuredImages__text {
+  position: absolute;
+  bottom: 50px;
+  left: 10px;
+  font-size: 14px;
+  color:#fff;
+}
+
+.featuredImages__tags {
+  position: absolute;
+  bottom: 35px;
+  left: 10px;
+  font-size: 10px;
+  color:#fff;
+}
+
+@media only screen and (min-width: 540px) {
+  .featuredImages {
+    margin: 40px auto 30px auto;
+  }
+
+  .featuredImages__title {
+      font-size: 32px;
+  }
+
+  .featuredImages__container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 2fr 1fr 1fr;
+    gap: 30px;
+  }
+
+  .featuredImages__img-first {
+    grid-column: 1/ 3;
+    grid-row: 1 /2;
+  }
+
+  .featuredImages__item {
+    margin: 0;
+  }
+
+  .featuredImages__text {
+    font-size: 18px;
+    bottom: 30px;
+  }
+
+  .featuredImages__tags {
+    font-size: 12px;
+    bottom: 10px;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .featuredImages {
+    margin: 60px auto;
+  }
+
+  .featuredImages__title {
+    margin-bottom: 30px;
+    text-align: left;
+  }
+
+  .featuredImages__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .featuredImages__img-first {
+    grid-column: 1/3;
+    grid-row: 1/3;
+  }
+
+  .featuredImages__item-extra {
+    display: none;
+  }
+
+  .featuredImages__text {
+    bottom: 50px;
+  }
+
+  .featuredImages__tags {
+    bottom: 20px;
+  }
+}
+
+.lastImages {
+  max-width: 1120px;
+  width: 80%;
+  margin: 10px auto;
+}
+
+.lastImages__container {
+  display: block;
+}
+
+.lastImages__title {
+  margin: 40px auto;
+  font-size: 24px;
+  color: #424242;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.lastImages__item {
+  height: 100%;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.lastImages__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  object-fit: cover;
+  transition: all 0.2s linear;
+}
+.lastImages__img:hover {
+  transform: scale(0.9);
+  cursor: pointer;
+}
+
+.lastImages__text-container {
+  /* position: relative; */
+  margin-bottom: 20px;
+}
+
+.lastImages__text {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color:#424242;
+}
+
+.lastImages__tags {
+  font-size: 10px;
+  color:#424242;
+}
+
+@media only screen and (min-width: 540px) {
+  .lastImages__title {
+    font-size: 32px;
+  }
+
+  .lastImages__container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 30px;
+    margin-bottom: 40px;
+  }
+
+  .lastImages__text {
+    font-size: 18px;
+  }
+
+  .lastImages__tags {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .lastImages__container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .lastImages__title {
+    text-align: left;
+    margin-bottom: 30px;
+  }
+}
+
+.banner {
+  display: none;
+}
+
+@media only screen and (min-width: 900px) {
+  .banner {
+    display: flex;
+    width: 700px;
+    height: 350px;
+    justify-content: center;
+    align-items: center;
+    color: #424242;
+    text-transform: uppercase;
+    background-color: #e2e2e2;
+  }
+}
