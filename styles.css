@@ -179,6 +179,7 @@ div {
   object-fit: cover;
   transition: all 0.2s linear;
 }
+
 .lastImages__img:hover {
   transform: scale(0.9);
   cursor: pointer;
